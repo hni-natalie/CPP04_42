@@ -10,33 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
 
-AAnimal::AAnimal() : _type("AAnimal") {
-	std::cout << "AAnimal Constructor is called.\n";
-}
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-AAnimal::~AAnimal() {
-	std::cout << "AAnimal Destructor is called.\n";
-}
+class Character : public ICharacter {
+	private:
+		std::string _name;
+		AMateria* _inventory[4];
 
-AAnimal::AAnimal(const AAnimal& other) : _type(other._type) {
-	std::cout << "AAnimal Copy Constructor is called.\n";
-}
+	public:
+		Character();
+		Character(std::string& name);
+		Character(const Character& other);
+		Character& operator=(const Character& other);
+		~Character();
 
-AAnimal& AAnimal::operator=(const AAnimal& other) {
-	std::cout << "AAnimal Copy Assignment Operator is called.\n";
-	if (this != &other) {
-		_type = other._type;
-	}
+		std::string const &getName() const;
+		void equip(AMateria* m);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
+};
 
-	return *this;
-}
-
-std::string AAnimal::getType() const {
-	return _type;
-}
-
-void AAnimal::setType(std::string& type) {
-	_type = type;
-}
+#endif

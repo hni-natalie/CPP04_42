@@ -10,33 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#include "Cure.hpp"
 
-AAnimal::AAnimal() : _type("AAnimal") {
-	std::cout << "AAnimal Constructor is called.\n";
+Cure::Cure() : AMateria("cure") {
+	std::cout << "Cure Constructor is called.\n";
 }
 
-AAnimal::~AAnimal() {
-	std::cout << "AAnimal Destructor is called.\n";
+Cure::Cure(const Cure& other) : AMateria(other) {
+	std::cout << "Cure Copy Constructor is called.\n";
 }
 
-AAnimal::AAnimal(const AAnimal& other) : _type(other._type) {
-	std::cout << "AAnimal Copy Constructor is called.\n";
-}
-
-AAnimal& AAnimal::operator=(const AAnimal& other) {
-	std::cout << "AAnimal Copy Assignment Operator is called.\n";
-	if (this != &other) {
-		_type = other._type;
-	}
+Cure& Cure::operator=(const Cure& other) {
+	std::cout << "Cure Copy Assignment Operator is called.\n";
+	if (this != &other)
+		AMateria::operator=(other);
 
 	return *this;
 }
 
-std::string AAnimal::getType() const {
-	return _type;
+Cure::~Cure() {
+	std::cout << "Cure Destructor is called.\n";
 }
 
-void AAnimal::setType(std::string& type) {
-	_type = type;
+Cure* Cure::clone() const {
+	return new Cure();
+}
+
+void Cure::use(ICharacter& target) {
+	std::cout << "* heals " << target.getName() << "'s wounds \n";
 }

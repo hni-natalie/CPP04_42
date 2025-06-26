@@ -18,8 +18,6 @@
 void ocf_dog()
 {
 	std::cout << "\n=== OCF Dog ===\n";
-	// AAnimal animal();
-
 	Dog d1;
 	Dog d2(d1);
 	Dog d3;
@@ -27,7 +25,6 @@ void ocf_dog()
 	d3 = d2;
 	d3.makeSound();
 }
-
 
 void ocf_cat()
 {
@@ -41,17 +38,28 @@ void ocf_cat()
 	c3.makeSound();
 }
 
+void pointer() 
+{
+	std::cout << "\n=== Pointer ===\n";
+	const AAnimal* j = new Dog;
+
+	std::cout << j->getType() << "\n";
+	j->makeSound();
+
+	delete j;
+}
+
 void tester()
 {
 	std::cout << "\n=== Test ===\n";
 	int n = 10;
-	const Animal*meta[n];
+	const AAnimal*meta[n];
 
 	for (int idx=0; idx < n; idx++) {
 		if (idx < (n / 2)) 
-			meta[idx] = new Dog();
+			meta[idx] = new Dog;
 		else 
-			meta[idx] = new Cat();
+			meta[idx] = new Cat;
 	}
 	std::cout << "\n";
 
@@ -107,8 +115,12 @@ void cat_brain_test() {
 
 int main() 
 {
+	// This will show error
+	// AAnimal a;
+	
 	ocf_cat();
 	ocf_dog();
+	pointer();
 	tester();
 	dog_brain_test();
 	cat_brain_test();

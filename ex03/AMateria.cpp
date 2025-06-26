@@ -10,33 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#include "AMateria.hpp"
 
-AAnimal::AAnimal() : _type("AAnimal") {
-	std::cout << "AAnimal Constructor is called.\n";
+AMateria::AMateria() {
+	std::cout << "AMateria Default Constructor is called.\n";
 }
 
-AAnimal::~AAnimal() {
-	std::cout << "AAnimal Destructor is called.\n";
+AMateria::AMateria(std::string const & type) : _type(type) {
+	std::cout << "AMateria Constructor is called.\n";
 }
 
-AAnimal::AAnimal(const AAnimal& other) : _type(other._type) {
-	std::cout << "AAnimal Copy Constructor is called.\n";
+AMateria::AMateria(const AMateria& other) : _type(other._type) {
+	std::cout << "AMateria Copy Constructor is called.\n";
 }
 
-AAnimal& AAnimal::operator=(const AAnimal& other) {
-	std::cout << "AAnimal Copy Assignment Operator is called.\n";
-	if (this != &other) {
+AMateria& AMateria::operator=(const AMateria& other) {
+	std::cout << "AMateria Copy Assignment Operator is called.\n";
+	if (this != &other)
 		_type = other._type;
-	}
 
 	return *this;
 }
 
-std::string AAnimal::getType() const {
+AMateria::~AMateria() {
+	std::cout << "AMateria Destructor is called.\n";
+}
+
+std::string const &AMateria::getType() const {
 	return _type;
 }
 
-void AAnimal::setType(std::string& type) {
-	_type = type;
+void AMateria::use(ICharacter& target) {
+	std::cout << "AMateria used " << target.getName() << "\n";
 }

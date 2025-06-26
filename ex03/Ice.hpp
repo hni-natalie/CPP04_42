@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 16:14:37 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:08:47 by hni-xuan         ###   ########.fr       */
+/*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
+/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef ICE_HPP
+#define ICE_HPP
 
-#include "AAnimal.hpp"
-#include "Brain.hpp"
+#include "AMateria.hpp"
 
-class Cat : public AAnimal {
-	private:
-		Brain* _cat_ideas;
-
+class Ice : public AMateria {
 	public:
-		Cat();
-		Cat(const Cat& other);
-		Cat& operator=(const Cat& other);
-		~Cat();
+		Ice();
+		Ice(const Ice& other);
+		Ice& operator=(const Ice& other);
+		~Ice();
 
-		void makeSound() const;
-		Brain* getBrain();
+		// clone an Ice Materia, will get a new Ice Materia
+		Ice* clone() const;
+		void use(ICharacter& target);
 };
 
 #endif

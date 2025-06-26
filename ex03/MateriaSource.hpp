@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 16:14:37 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:08:47 by hni-xuan         ###   ########.fr       */
+/*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
+/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 
-#include "AAnimal.hpp"
-#include "Brain.hpp"
+#include "IMateriaSource.hpp"
 
-class Cat : public AAnimal {
+class MateriaSource : public IMateriaSource {
 	private:
-		Brain* _cat_ideas;
+		AMateria* _memory[4];
 
 	public:
-		Cat();
-		Cat(const Cat& other);
-		Cat& operator=(const Cat& other);
-		~Cat();
+		MateriaSource();
+		MateriaSource(const MateriaSource& other);
+		MateriaSource& operator=(const MateriaSource& other);
+		~MateriaSource();
 
-		void makeSound() const;
-		Brain* getBrain();
+		void learnMateria(AMateria* materia);
+		AMateria* createMateria(std::string const& type);
 };
 
 #endif

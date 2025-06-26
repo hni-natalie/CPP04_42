@@ -12,7 +12,7 @@
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal() {
+Dog::Dog() : AAnimal() {
 	std::cout << "Dog Constructor is called\n";
 	_type = "Dog";
 	_dog_ideas = new Brain();
@@ -23,7 +23,7 @@ Dog::~Dog() {
 	std::cout << "Dog Destructor is called.\n";
 }
 
-Dog::Dog(const Dog& other) : Animal(other) {
+Dog::Dog(const Dog& other) : AAnimal(other) {
 	std::cout << "Dog Copy Constructor is called.\n";
 	_dog_ideas = new Brain(*other._dog_ideas);
 }
@@ -31,7 +31,7 @@ Dog::Dog(const Dog& other) : Animal(other) {
 Dog& Dog::operator=(const Dog& other) {
 	std::cout << "Dog Copy Assignment Operator is called.\n";
 	if (this != &other) {
-		Animal::operator=(other);
+		AAnimal::operator=(other);
 		delete _dog_ideas;
 		_dog_ideas = new Brain(*other._dog_ideas);
 	}

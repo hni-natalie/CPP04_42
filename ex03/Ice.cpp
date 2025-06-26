@@ -10,33 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#include "Ice.hpp"
 
-AAnimal::AAnimal() : _type("AAnimal") {
-	std::cout << "AAnimal Constructor is called.\n";
+Ice::Ice() : AMateria("ice") {
+	std::cout << "Ice Constructor is called.\n";
 }
 
-AAnimal::~AAnimal() {
-	std::cout << "AAnimal Destructor is called.\n";
+Ice::Ice(const Ice& other) : AMateria(other) {
+	std::cout << "Ice Copy Constructor is called.\n";
 }
 
-AAnimal::AAnimal(const AAnimal& other) : _type(other._type) {
-	std::cout << "AAnimal Copy Constructor is called.\n";
-}
-
-AAnimal& AAnimal::operator=(const AAnimal& other) {
-	std::cout << "AAnimal Copy Assignment Operator is called.\n";
-	if (this != &other) {
-		_type = other._type;
-	}
+Ice& Ice::operator=(const Ice& other) {
+	std::cout << "Ice Copy Assignment Operator is called.\n";
+	if (this != &other)
+		AMateria::operator=(other);
 
 	return *this;
 }
 
-std::string AAnimal::getType() const {
-	return _type;
+Ice::~Ice() {
+	std::cout << "Ice Destructor is called.\n";
 }
 
-void AAnimal::setType(std::string& type) {
-	_type = type;
+Ice* Ice::clone() const {
+	return new Ice();
+}
+
+void Ice::use(ICharacter& target) {
+	std::cout << "* shhots an ice blot at " << target.getName() << "*\n";
 }
