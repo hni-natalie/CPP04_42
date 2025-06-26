@@ -1,8 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/26 16:11:17 by hni-xuan          #+#    #+#             */
+/*   Updated: 2025/06/26 18:16:10 by hni-xuan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cat.hpp"
 
 Cat::Cat() : Animal() {
 	std::cout << "Cat Constructor is called\n";
-	type = "Cat";
+	_type = "Cat";
+}
+
+Cat::Cat(std::string type) : Animal(type)  {
+	std::cout << "Cat Constructor is called\n";
 }
 
 Cat::~Cat() {

@@ -6,30 +6,19 @@
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:24:41 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 16:24:42 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/26 19:07:53 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-void ocf_animal()
-{
-	std::cout << "\n=== OCF Animal ===\n";
-
-	Animal a1;
-	Animal a2(a1);
-	Animal a3;
-
-	a3 = a2;
-	a3.makeSound();
-}
-
 void ocf_dog()
 {
 	std::cout << "\n=== OCF Dog ===\n";
+	// AAnimal animal();
 
 	Dog d1;
 	Dog d2(d1);
@@ -118,7 +107,6 @@ void cat_brain_test() {
 
 int main() 
 {
-	ocf_animal();
 	ocf_cat();
 	ocf_dog();
 	tester();

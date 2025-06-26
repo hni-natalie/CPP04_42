@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/26 16:14:47 by hni-xuan          #+#    #+#             */
+/*   Updated: 2025/06/26 19:03:47 by hni-xuan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef DOG_HPP
 #define DOG_HPP
 
@@ -10,6 +22,7 @@ class Dog : public Animal {
 
 	public:
 		Dog();
+		Dog(std::string type);
 		Dog(const Dog& other);
 		Dog& operator=(const Dog& other);
 		~Dog();

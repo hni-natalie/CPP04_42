@@ -6,7 +6,7 @@
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:14:33 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:02:57 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/26 19:08:10 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@ Cat::Cat() : Animal() {
 	std::cout << "Cat Constructor is called\n";
 	_type = "Cat";
 	_cat_ideas = new Brain();
-}
-
-Cat::Cat(std::string type) : Animal(type)  {
-	std::cout << "Cat Constructor is called\n";
 }
 
 Cat::~Cat() {

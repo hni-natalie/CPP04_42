@@ -1,9 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/26 16:14:41 by hni-xuan          #+#    #+#             */
+/*   Updated: 2025/06/26 19:03:30 by hni-xuan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Dog.hpp"
 
 Dog::Dog() : Animal() {
 	std::cout << "Dog Constructor is called\n";
-	type = "Dog";
+	_type = "Dog";
 	_dog_ideas = new Brain();
+}
+
+Dog::Dog(std::string type) : Animal(type)  {
+	std::cout << "Dog Constructor is called\n";
 }
 
 Dog::~Dog() {

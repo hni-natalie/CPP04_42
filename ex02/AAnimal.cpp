@@ -1,44 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:05:14 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 Animal::Animal() : _type("Animal") {
-	std::cout << "Animal Constructor is called.\n";
-}
-
-Animal::Animal(std::string new_type) : _type(new_type) {
-	std::cout << "Animal Constructor is called.\n";
+	std::cout << "AAnimal Constructor is called.\n";
 }
 
 Animal::~Animal() {
-	std::cout << "Animal Destructor is called.\n";
+	std::cout << "AAnimal Destructor is called.\n";
 }
 
 Animal::Animal(const Animal& other) : _type(other._type) {
-	std::cout << "Animal Copy Constructor is called.\n";
+	std::cout << "AAnimal Copy Constructor is called.\n";
 }
 
 Animal& Animal::operator=(const Animal& other) {
-	std::cout << "Animal Copy Assignment Operator is called.\n";
+	std::cout << "AAnimal Copy Assignment Operator is called.\n";
 	if (this != &other) {
 		_type = other._type;
 	}
 
 	return *this;
-}
-
-void Animal::makeSound() const {
-	std::cout << "Animal make sound ~\n";
 }
 
 std::string Animal::getType() const {

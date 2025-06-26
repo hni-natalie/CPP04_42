@@ -6,7 +6,7 @@
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:13:45 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:02:48 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/26 16:22:30 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ void Brain::setIdea(int index, const std::string& idea) {
 	_ideas[index] = idea;
 }
 
-std::string& Brain::getIdea(int index) {
-	// create a permenant empty string  
+std::string& Brain::getIdea(int index) {	
 	static std::string empty = "";
 	if (index < 0 || index > 100) {
 		std::cout << "Error: Index must be 0 - 99\n";
