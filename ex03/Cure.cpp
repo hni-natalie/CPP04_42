@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 11:08:16 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ Cure* Cure::clone() const {
 }
 
 void Cure::use(ICharacter& target) {
-	std::cout << "* heals " << target.getName() << "'s wounds \n";
+	std::cout << "* heals " << target.getName() << "'s wounds *\n";
 }

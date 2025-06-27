@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 11:37:07 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
 				_memory[i] = NULL;
 		}
 	}
+	return *this;
 }
 
 MateriaSource::~MateriaSource() {
@@ -61,6 +62,7 @@ void MateriaSource::learnMateria(AMateria* materia) {
 			return;
 		}
 	}
+	delete materia;
 	std::cout << "Memory is full.\n";
 }
 
@@ -73,5 +75,6 @@ AMateria* MateriaSource::createMateria(std::string const& type) {
 			return _memory[i]->clone();
 		}
 	}
+	std::cout << "Oh No! " << type << " is not in the memory.\n";
 	return 0;
 }

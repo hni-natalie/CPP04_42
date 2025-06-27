@@ -6,7 +6,7 @@
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:11:13 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 17:55:58 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 13:44:40 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Animal {
 
 		void setType(std::string& type);
 		std::string getType() const;
+		// virtual - allow polymorphism work
 		virtual void makeSound() const;
 };
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 11:08:04 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ Ice* Ice::clone() const {
 }
 
 void Ice::use(ICharacter& target) {
-	std::cout << "* shhots an ice blot at " << target.getName() << "*\n";
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }

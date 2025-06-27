@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 14:03:13 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ Character::Character() : _name("anonymous") {
 	std::cout << "Character Default Constructor is called.\n";
 }
 
-Character::Character(std::string& name) : _name(name) {
+Character::Character(std::string name) : _name(name) {
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
-	std::cout << "Character Constructor is called.\n";
+	std::cout << _name << " Character Constructor is called.\n";
 }
 
 Character::Character(const Character& other) : _name(other._name) {
@@ -54,7 +54,7 @@ Character& Character::operator=(const Character& other) {
 }
 
 Character::~Character() {
-	std::cout << "Character Destructor is called.\n";
+	std::cout << _name << " Character Destructor is called.\n";
 	for (int i = 0; i < 4; i++)
 		if (_inventory[i])
 			delete _inventory[i];
@@ -103,3 +103,9 @@ void Character::use(int idx, ICharacter& target) {
 	}
 	std::cout << "Inventory at index " << idx << " is empty.\n";
 }
+
+// AMateria* Character::getInventoryAddress(int i) const {
+// 	if (i < 0 || i >= 4)
+//         return NULL;
+//     return _inventory[i];
+// }

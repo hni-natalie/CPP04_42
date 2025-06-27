@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:13:33 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:06:46 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 14:03:08 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Character : public ICharacter {
 
 	public:
 		Character();
-		Character(std::string& name);
+		Character(std::string name);
 		Character(const Character& other);
 		Character& operator=(const Character& other);
 		~Character();
@@ -32,6 +32,8 @@ class Character : public ICharacter {
 		void equip(AMateria* m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
+
+		// AMateria* getInventoryAddress(int i) const;
 };
 
 #endif

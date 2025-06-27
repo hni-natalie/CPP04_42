@@ -6,7 +6,7 @@
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:11:35 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 18:14:49 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 13:45:38 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void ocf_animal()
 
 	a3 = a2;
 	a3.makeSound();
+	
+	std::cout << "\n=== Free ===\n";
 }
 
 void ocf_dog()
@@ -37,6 +39,8 @@ void ocf_dog()
 
 	d3 = d2;
 	d3.makeSound();
+	
+	std::cout << "\n=== Free ===\n";
 }
 
 
@@ -50,6 +54,8 @@ void ocf_cat()
 
 	c3 = c2;
 	c3.makeSound();
+
+	std::cout << "\n=== Free ===\n";
 }
 
 void tester_42()
@@ -87,6 +93,8 @@ void wrong_animal()
 	
 	delete alpha;
 	delete minion;
+
+	std::cout << "\n=== Free ===\n";
 }
 
 void constructor_wif_name() {
@@ -98,6 +106,8 @@ void constructor_wif_name() {
 	std::cout << animal.getType() << "\n";
 	std::cout << dog.getType() << "\n";
 	std::cout << cat.getType() << "\n";
+
+	std::cout << "\n=== Free ===\n";
 }
 
 int main() 

@@ -4,7 +4,7 @@ RM = rm -f
 
 NAME = interface
 
-SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp 
+SRC = main.cpp AMateria.cpp MateriaSource.cpp Ice.cpp Cure.cpp Character.cpp 
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

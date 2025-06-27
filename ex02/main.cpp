@@ -6,7 +6,7 @@
 /*   By: hni-xuan <hni-xuan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:24:41 by hni-xuan          #+#    #+#             */
-/*   Updated: 2025/06/26 19:07:53 by hni-xuan         ###   ########.fr       */
+/*   Updated: 2025/06/27 14:24:34 by hni-xuan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,9 @@ void tester()
 
 	for (int idx=0; idx < n; idx++) {
 		if (idx < (n / 2)) 
-			meta[idx] = new Dog;
+			meta[idx] = new Dog();
 		else 
-			meta[idx] = new Cat;
+			meta[idx] = new Cat();
 	}
 	std::cout << "\n";
 
