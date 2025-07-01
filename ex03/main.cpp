@@ -15,6 +15,7 @@
 #include "MateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "AMateria.hpp"
 
 void ocf_ice()
 {
@@ -23,7 +24,7 @@ void ocf_ice()
 	Ice a1;
 	Ice a2(a1);
 	Ice a3;
-	Ice* ice;
+	AMateria* ice;
 	
 	a3 = a2;
 	ice = a3.clone();
@@ -171,7 +172,7 @@ void create_test()
 	delete extra;
 
 	std::cout << "\n=== Free ===\n";
-	delete src;
+	// delete src;
 }
 
 void equip_unequip_test()

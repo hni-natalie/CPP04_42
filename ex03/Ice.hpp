@@ -23,7 +23,7 @@ class Ice : public AMateria {
 		~Ice();
 
 		// clone an Ice Materia, will get a new Ice Materia
-		Ice* clone() const;
+		AMateria* clone() const;
 		void use(ICharacter& target);
 };
 

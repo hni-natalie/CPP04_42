@@ -1,5 +1,5 @@
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -g -O0 -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
 NAME = interface
@@ -25,3 +25,6 @@ re: fclean all
 
 valgrind:
 	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
+
+leak:
+	leaks --atExit -- ./$(NAME)

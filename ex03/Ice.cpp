@@ -32,7 +32,7 @@ Ice::~Ice() {
 	std::cout << "Ice Destructor is called.\n";
 }
 
-Ice* Ice::clone() const {
+AMateria* Ice::clone() const {
 	return new Ice();
 }
 

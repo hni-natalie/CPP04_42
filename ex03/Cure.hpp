@@ -23,7 +23,7 @@ class Cure : public AMateria {
 		~Cure();
 
 		// clone an Cure Materia, will get a new Cure Materia
-		Cure* clone() const;
+		AMateria* clone() const;
 		void use(ICharacter& target);
 };
 

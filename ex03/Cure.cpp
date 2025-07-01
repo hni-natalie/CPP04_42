@@ -32,7 +32,7 @@ Cure::~Cure() {
 	std::cout << "Cure Destructor is called.\n";
 }
 
-Cure* Cure::clone() const {
+AMateria* Cure::clone() const {
 	return new Cure();
 }
 
